@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Cadastro de Perfume</title>
+</h:head>
+<body>
+	<h1>Cadastro de perfume</h1>
+	<h:form>
+		<h:messages/>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Nome" for="nome" />
+			<h:inputText value="#{perfumeBean.perfume.nome}" id="nome" />
+
+			<h:outputLabel value="Aroma:" for="aroma" />
+			<h:inputText value="#{perfumeBean.perfume.aroma}" id="aroma" />
+
+			<h:outputLabel value="Ml:" for="ml" />
+			<h:inputText value="#{perfumeBean.perfume.ml}" id="ml" />
+
+			<h:commandButton action="#{perfumeBean.cadastrar()}"
+				value="Cadastrar" />
+		</h:panelGrid>
+	</h:form>
+</body>
+</html>
